@@ -63,9 +63,24 @@
     </nav>
   </header>
   <main>
-    <!-- Replace 'your-image.jpg' with your image file or URL -->
-    <img src="mysticbeat23.jpg" alt="Mystic Beat Logo"/>
-    <p>Welcome to Mystic Beat — your destination for the latest music, news, and merch.</p>
+    <img id="randomImage" src="" alt="Random Image" style="max-width: 90%; height: auto;" />
+
+<script>
+  // List of image URLs
+  const images = [
+    "https://example.com/mysticbeat26.jpg",
+    "https://example.com/mysticbeat27.png",
+    "https://example.com/image3.jpg"
+    // Add more image URLs here
+  ];
+
+  // Select a random image
+  const randomIndex = Math.floor(Math.random() * images.length);
+  const selectedImage = images[randomIndex];
+
+  // Set the image src
+  document.getElementById("randomImage").src = selectedImage;
+</script>
   </main>
   <footer>
     &copy; 2025 Mystic Beat. All rights reserved.
