@@ -4,6 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mystic Beat</title>
+  // random script starts here
+  <script>
+    function getRandomColor() {
+      return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Apply random colors to all elements after DOM is fully loaded
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach(el => {
+        el.style.color = getRandomColor();
+        el.style.backgroundColor = getRandomColor();
+      });
+    });
+  </script>
+  // random script ends here
   <style>
     body {
       font-family: Arial, sans-serif;
